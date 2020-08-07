@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入jquery的js文库 -->
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//给提交按钮绑定单击事件
+		$("#sub").click(function(){
+			//获取输入的用户名
+			var username=$("#username").val();
+			//设置一个用户名是否符合规则的正则表达式
+			var userReg =/^[a-zA-Z0-9_-]{3,6}$/;
+			//验证用户名是否符合规则
+			var flag=userReg.test(username);
+			if(!flag){
+				alert("输入的用户名不符合规范");
+				return false;
+			}
+			/*
+			一些正则表达式：
+				以a开头：/^a/
+				以小大写字母数字开头：/^[a-zA-Z0-9]/
+				同上，3-6位：/^[a-zA-Z0-9_-]{3,6}$/ 
+			*/
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="index.html" method="post">
+		用户名：<input type="text" name="username" id="username"><br/>
+		<input type="submit" id="sub">
+	</form>
+
+</body>
+</html>

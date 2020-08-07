@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入Jquery的js文库 -->
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	//相当于window.onload = function(){};
+	$(function(){
+			//获取按钮对象并且给他绑定单击事件
+			$("#btnId").click(function(){
+				//弹出提示框
+				alert("蔡徐坤很帅！");
+			});
+	});
+</script>
+</head>
+<body>
+	<button id="btnId">点击这个按钮</button>
+</body>
+</html>

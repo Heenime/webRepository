@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- JavaScript代码，需要写在script标签中 -->
+<script type="text/javascript">
+	//当整个文档都加载完成之后再执行函数中的内容
+	window.onload=function(){
+		//1.获取按钮对象
+		var btnEle = document.getElementById("btnId");
+		//2.给对象绑定单击事件
+		btnEle.onclick=function(){
+			alert("你好 蔡徐坤");
+		};
+	};
+</script>
+</head>
+<body>
+	<button id="btnId">点击这个按钮</button>
+</body>
+</html>
